@@ -1,0 +1,53 @@
+body {
+    font-family: sans
+}
+.app {
+    display: flex;
+}
+.result-view {
+    flex-basis: 70%;
+}
+.filter-view {
+    flex-basis: 25%;
+}
+.sort-view {
+    margin: 10px 0;
+}
+.pagination li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 10px;
+}
+.filter-item {
+    padding: 5px 0;
+    cursor: pointer;
+}
+.clicked::before {
+    content: '\2713';
+    color: '#232'
+}
+
+.result-box {
+    border: 2px solid #2f2f2f;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+.result-box a {
+    color: #252756;
+    margin: 0 auto;
+    width: 80%;
+}
+.result-price {
+    margin-bottom: 20px
+}
+.result-buy {
+    width: 100px;
+    border: 2px solid #252756 ;
+    padding: 7px;
+    margin-bottom: 10px
+}
+.result-end {
+    display: inline-block;
+    width: 50%;
+}
+

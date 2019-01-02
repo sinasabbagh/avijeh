@@ -1,0 +1,37 @@
+import React from 'react'
+import { connect } from 'react-redux'
+
+import { selectAllDays } from '../../redux/selectors/filterDataSelectors'
+import { doFilterDeparture } from '../../redux/actions'
+import { FilterItem } from './filterItem'
+const FilterDepartureDry = ({allDays, handleChange}) => {
+  return(
+    <div>
+      <h3>Filter Departure Time</h3>
+      {
+        allDays ?
+        <div>
+          <FilterItem key={'dateall'}
+                      onClick={handleChange}
+                      id={'ALL'}
+                      content={"All"} />
+          {allDays.map((s) => <FilterItem key={`date${s}`}
+                                          onClick={handleChange}
+                                          id={s}
+                                          content={`${s.split('T')[0]}, ${s.split('T')[1]}`} />)}
+        </div> :
+        <div>Waiting</div>
+      }
+    </div>
+  )
+}
+
+const DepartureStateToProps = (state) => ({
+  allDays: selectAllDays(state)
+})
+const DepartureDispatchToProps = (dispatch) => ({
+  handleChange: (val) => dispatch(doFilterDeparture(val))
+})
+const FilterDeparture = connect(DepartureStateToProps,DepartureDispatchToProps)(FilterDepartureDry)
+
+export default FilterDeparture

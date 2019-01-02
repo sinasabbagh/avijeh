@@ -1,0 +1,12 @@
+export const fetch_results = 'FETCH_RESULTS',
+fetch_departures = 'FETCH_DEPARTURES',
+fetch_airlines = 'FETCH_AIRLINES',
+fetch_stops = 'FETCH_STOPS',
+fetch_prices = 'FETCH_PRICES',
+sort_price = 'SORT_PRICE',
+sort_duration = 'SORT_DURATION',
+sort_stops = 'SORT_STOPS',
+filter_departure = 'FILTER_DEPARTURE',
+filter_stops = 'FILTER_STOPS',
+filter_airline = 'FILTER_AIRLINE',
+filter_price = 'FILTER_PRICE'
